@@ -1,0 +1,5 @@
+#!ipxe
+
+set url http://192.168.116.99
+kernel ${url}/mboot.efi -c ${url}/boot.cfg BOOTIF=01-${net0/mac:hexhyp}
+boot

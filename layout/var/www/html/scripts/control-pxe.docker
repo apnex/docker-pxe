@@ -1,0 +1,11 @@
+FROM nginx:stable-alpine
+EXPOSE 80
+EXPOSE 67/udp
+EXPOSE 69/udp
+RUN apk add --no-cache \
+	curl \
+	dhcp \
+	tftp-hpa
+RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/main nodejs nodejs-npm
+ADD ["./layout.tar.gz", "/"]
+ENTRYPOINT ["/root/start.sh"]

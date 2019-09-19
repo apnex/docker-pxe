@@ -1,0 +1,34 @@
+{
+	"dhcp": [
+		{
+			"network": "172.16.10.0/24",
+			"allocation-ranges": [{
+				"start": "172.16.10.30",
+				"end": "172.16.10.99"
+			}],
+			"gateway-ip": "172.16.10.1",
+			"name-server": "172.16.10.12",
+			"bound-ips": [
+				{
+					"host-name": "esx01.lab",
+					"mac-address": "00:de:ad:be:ef:11",
+					"ip-address": "172.16.10.101"
+				},
+				{
+					"host-name": "esx02.lab",
+					"mac-address": "00:de:ad:be:ef:21",
+					"ip-address": "172.16.10.102"
+				},
+				{
+					"host-name": "esx03.lab",
+					"mac-addres": "00:de:ad:be:ef:31",
+					"ip-address": "172.16.10.103"
+				}
+			],
+			"pxe": {
+				"user-class": "iPXE",
+				"boot-server": "boot.lab"
+			}
+		}
+	]
+}
