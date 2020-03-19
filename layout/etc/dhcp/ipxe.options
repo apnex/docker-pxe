@@ -15,7 +15,7 @@ option ipxe.version code 235 = string;
 option iscsi-initiator-iqn code 203 = string;
 
 # Feature indicators
-option ipxe.pxeext	code 16 = unsigned integer 8;
+option ipxe.pxeext code 16 = unsigned integer 8;
 option ipxe.iscsi code 17 = unsigned integer 8;
 option ipxe.aoe code 18 = unsigned integer 8;
 option ipxe.http code 19 = unsigned integer 8;
