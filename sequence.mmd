@@ -1,0 +1,15 @@
+sequenceDiagram
+	client->>dhcp: DHCP Request
+	dhcp-->>client: DHCP Response {ip, tftp-server}
+	client->>tftp: Request {ipxe.pxe}
+	tftp-->>client: Response {ipxe.pxe}
+	client->>http: Fetch {init.ipxe}
+	http-->>client: Response {init.ipxe}
+	client->>http: Fetch {centos.ipxe}
+	http-->>client: Response {centos.ipxe}
+	client->>mirror: Fetch {kernel}
+	mirror-->>client: Return {kernel}
+	client->>http: fetch {centos.ks}
+	http-->>client: return {centos.ks}
+	client->>mirror: fetch installation rpms
+	mirror-->>client: return rpms
